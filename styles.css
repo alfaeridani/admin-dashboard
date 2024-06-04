@@ -25,6 +25,7 @@ body {
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: 50px 100px 1fr;
+    gap: 10px;
 }
 
 
@@ -37,7 +38,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 0.5rem;
 }
 
 .dashboard-main-logo {
@@ -67,9 +67,40 @@ body {
 /* Search bar styling */
 
 .searchbar {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.searchbar-icon, .profile-picture {
+    width: 32px;
+    height: 32px;
+}
+
+.profile-picture {
+    border-radius: 50%;
+}
+
+.search-box {
+    background-color: var(--peach);
+    border-radius: 0.5rem;
+    height: 50%;
+    width: max(100px, 80%);
+    border: none;
+}
+
+.searchbar-left {
     display: flex;
-    justify-content: space-around;
-}   
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.searchbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
 
 
 
