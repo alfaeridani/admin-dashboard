@@ -1,0 +1,58 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: 50px 100px 1fr;
+}
+
+.sidebar {
+    grid-row: 1 / -1;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.projects {
+    grid-row: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.title {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
+.project-card > p {
+    text-align: justify;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.single-trending {
+    display: flex;
+}
