@@ -1,24 +1,78 @@
-html, body {
+:root {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+    --rosewater: #FFC2C7;
+    --spearmint: #B6E5D8;
+    --peach: #FBE5C8;
+    --turquoise: #8FDDE7;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
-    width: 100%;
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 body {
+    width: 100vw;
+    height: 100vh;
     display: grid;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 300px 1fr;
     grid-template-rows: 50px 100px 1fr;
 }
 
+
+
+/* Sidebar styling */
+
 .sidebar {
     grid-row: 1 / -1;
+    background-color: var(--turquoise);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0.5rem;
 }
+
+.dashboard-main-logo {
+    display: flex;
+    align-items: center;
+}
+
+.list > ul {
+    list-style-type: none;
+    margin-left: 0.5rem;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 16px;
+}
+
+.dashboard-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.dashboard-icon, li {
+    align-self: center;
+}
+
+
+/* Search bar styling */
 
 .searchbar {
     display: flex;
     justify-content: space-around;
-}
+}   
+
+
+
 
 .header {
     display: flex;
